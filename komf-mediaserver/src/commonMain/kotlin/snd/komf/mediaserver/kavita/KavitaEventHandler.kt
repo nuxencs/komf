@@ -161,6 +161,7 @@ class KavitaEventHandler(
         hubConnection.on("BackupDatabaseProgress", { }, Object::class.java)
         hubConnection.on("BookThemeProgress", { }, Object::class.java)
         hubConnection.on("ConvertBookmarksProgress", { }, Object::class.java)
+        hubConnection.on("ChapterUpdated", { }, Object::class.java)
         hubConnection.on("CleanupProgress", { }, Object::class.java)
         hubConnection.on("CoverUpdateProgress", { }, Object::class.java)
         hubConnection.on("DownloadProgress", { }, Object::class.java)
