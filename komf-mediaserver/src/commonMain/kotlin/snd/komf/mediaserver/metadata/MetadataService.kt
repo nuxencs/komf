@@ -224,7 +224,7 @@ class MetadataService(
         bookEdition: String?,
         eventFlow: MutableSharedFlow<MetadataJobEvent>
     ): SeriesAndBookMetadata? {
-        for (searchTitle in searchTitles) {
+        for (searchTitle in searchTitles.filter { it.isNotBlank() }) {
             logger.info { "searching \"$searchTitle\" using ${provider.providerName()}" }
 
             eventFlow.emit(ProviderSeriesEvent(provider.providerName()))
